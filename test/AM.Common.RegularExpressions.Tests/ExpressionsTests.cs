@@ -15,7 +15,9 @@ namespace AM.Common.RegularExpressions.Tests
 
         [InlineData("")]
         [InlineData("   ")]
-        [InlineData("1111a123")]
+        [InlineData("1b1")]
+        [InlineData("a111")]
+        [InlineData("111z")]
         [InlineData("aaa")]
         [Theory]
         public void Number_DoesntMatchWithNonNumericStrings(string value)
