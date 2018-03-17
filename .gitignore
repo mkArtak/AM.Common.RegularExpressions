@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/src/AM.Common.RegularExpressions/bin
+/src/AM.Common.RegularExpressions/obj
+/test/AM.Common.RegularExpressions.Tests/bin
+/test/AM.Common.RegularExpressions.Tests/obj
