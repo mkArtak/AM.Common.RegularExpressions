@@ -65,7 +65,7 @@ namespace AM.Common.RegularExpressions.Tests
         [Theory]
         public void Url_MatchesValidUrl(string value)
         {
-            Assert.Matches(Patterns.Url, value);
+            Assert.Matches($"^{Patterns.Url}$", value);
         }
 
         [InlineData("")]
@@ -76,7 +76,7 @@ namespace AM.Common.RegularExpressions.Tests
         [Theory]
         public void Url_DoesntMatchWithInvalidUrl(string value)
         {
-            Assert.DoesNotMatch(Patterns.Url, value);
+            Assert.DoesNotMatch($"^{Patterns.Url}$", value);
         }
     }
 }
