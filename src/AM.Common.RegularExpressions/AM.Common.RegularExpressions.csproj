@@ -12,6 +12,7 @@
     <PackageTags>regular expression regex email url</PackageTags>
     <PackageReleaseNotes>Created the initial version, which contains patterns for email, URL and number</PackageReleaseNotes>
     <Version>0.1.0</Version>
+    <PackageLicenseUrl>https://github.com/mkArtak/AM.Common.RegularExpressions/blob/master/LICENSE.md</PackageLicenseUrl>
   </PropertyGroup>
 
 </Project>
