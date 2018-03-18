@@ -1,2 +1,2 @@
-# AM.Common.RegularExpressions
+# AM.Common.RegularExpressions ![Build Status](https://travis-ci.org/mkArtak/AM.Common.RegularExpressions.png)
 A project for encapsulating regular expressions for well-known patters like email, zip code, URL, ...
