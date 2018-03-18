@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Artak Mkrtchyan</Authors>
+    <Company />
+    <Description>A package which encapsulates regular expression patterns for reuse</Description>
+    <PackageProjectUrl>https://github.com/mkArtak/AM.Common.RegularExpressions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mkArtak/AM.Common.RegularExpressions</RepositoryUrl>
+    <PackageTags>regular expression regex email url</PackageTags>
+    <PackageReleaseNotes>Created the initial version, which contains patterns for email, URL and number</PackageReleaseNotes>
+    <Version>0.1.0</Version>
   </PropertyGroup>
 
 </Project>
