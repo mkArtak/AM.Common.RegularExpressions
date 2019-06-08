@@ -62,6 +62,7 @@ namespace AM.Common.RegularExpressions.Tests
         [InlineData("http://www.regexr.com")]
         [InlineData("https://analytics.google.com/analytics/web/#embed/report-home/a1053531sdfsdfsfsdf33w157273318p158783999/")]
         [InlineData("https://www.bing.com/search?q=something+very+special+&qs=n&form=QBLH&sp=-1&pq=something+very+special+&sc=6-23&sk=&cvid=66621BEC9C8845D4B9157AA63516C6A5")]
+        [InlineData("https://medium.com/p/9e53ca408c48")]
         [Theory]
         public void Url_MatchesValidUrl(string value)
         {
