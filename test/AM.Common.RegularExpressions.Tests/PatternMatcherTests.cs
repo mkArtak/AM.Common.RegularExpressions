@@ -1,28 +1,50 @@
-﻿using Xunit;
+﻿using AM.Common.RegularExpressions.Tests.TestData;
+using Xunit;
 
 namespace AM.Common.RegularExpressions.Tests
 {
     public class PatternMatcherTests
     {
-        [InlineData("https://microsoft.com")]
-        [InlineData("https://sharetwist.com")]
-        [InlineData("https://sharetwist.com/v/1061144626190608ui70iqxq39i_hq")]
         [Theory]
+        [ClassData(typeof(ValidUrls))]
         public void IsMatch_ReturnsTrueForValidUrls(string value)
         {
             Assert.True(PatternMatcher.Is(value, ContentType.Url));
         }
 
-        [Fact]
-        public void IsMatch_ReturnsFalseForNull()
+        [Theory]
+        [ClassData(typeof(InvalidUrls))]
+        public void IsMatch_ReturnsFalseForInvalidUrls(string value)
         {
-            Assert.False(PatternMatcher.Is(null, ContentType.Url));
+            Assert.False(PatternMatcher.Is(value, ContentType.Url));
         }
 
-        [Fact]
-        public void IsMatch_ReturnsFalseForEmptyString()
+        [Theory]
+        [ClassData(typeof(ValidEmails))]
+        public void IsMatch_ReturnsTrueForValidEmails(string value)
         {
-            Assert.False(PatternMatcher.Is(string.Empty, ContentType.Url));
+            Assert.True(PatternMatcher.Is(value, ContentType.Email));
+        }
+
+        [Theory]
+        [ClassData(typeof(InvalidEmails))]
+        public void IsMatch_ReturnsFalseForInvalidEmails(string value)
+        {
+            Assert.False(PatternMatcher.Is(value, ContentType.Email));
+        }
+
+        [Theory]
+        [ClassData(typeof(ValidWholeNumbers))]
+        public void IsMatch_ReturnsTrueForValidwholeNumbers(string value)
+        {
+            Assert.True(PatternMatcher.Is(value, ContentType.WholeNumber));
+        }
+
+        [Theory]
+        [ClassData(typeof(InvalidWholeNumbers))]
+        public void IsMatch_ReturnsFalseForInvalidwholeNumbers(string value)
+        {
+            Assert.False(PatternMatcher.Is(value, ContentType.WholeNumber));
         }
     }
 }
